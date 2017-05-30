@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Fucking Web Engineering</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/slider_css.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" href="css/et-line-font.css">
+	<link rel="stylesheet" href="css/nivo-lightbox.css">
+	<link rel="stylesheet" href="css/nivo_themes/default/default.css">
+	<link rel="stylesheet" href="css/style.css">
+	<!-- Js only for Slider -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
+	<script src="js/jssor.slider-23.1.6.min.js" type="text/javascript"></script>
+	<script src="js/slider_carousel.js" type="text/javascript"></script>
+	<!-- End Of Js Only for Slider -->
+</head>
+<body data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+<!-- preloader section -->
+<div class="preloader">
+	<div class="sk-spinner sk-spinner-circle">
+       <div class="sk-circle1 sk-circle"></div>
+       <div class="sk-circle2 sk-circle"></div>
+       <div class="sk-circle3 sk-circle"></div>
+       <div class="sk-circle4 sk-circle"></div>
+       <div class="sk-circle5 sk-circle"></div>
+       <div class="sk-circle6 sk-circle"></div>
+       <div class="sk-circle7 sk-circle"></div>
+       <div class="sk-circle8 sk-circle"></div>
+       <div class="sk-circle9 sk-circle"></div>
+       <div class="sk-circle10 sk-circle"></div>
+       <div class="sk-circle11 sk-circle"></div>
+       <div class="sk-circle12 sk-circle"></div>
+    </div>
+</div>
+
+<!-- navigation section -->
+<section class="navbar navbar-fixed-top custom-navbar" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+			<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="icon icon-bar"></span>
+				<span class="icon icon-bar"></span>
+				<span class="icon icon-bar"></span>
+			</button>
+			<a href="index.html" class="navbar-brand">SocDev</a>
+		</div>
+		
+		<div class="collapse navbar-collapse">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="index.html" class="smoothScroll">HOME</a></li>
+				<li><a href="index.html#work" class="smoothScroll">DEVELOPERS</a></li>
+				<li><a href="index.html#portfolio" class="smoothScroll">PROJECTS</a></li>
+				<li><a href="login.html" class="smoothScroll">SIGN IN / SIGN UP</a></li>
+				<li><a href="about.html" class="smoothScroll">ABOUT</a></li>
+				<li><a href="index.html#contact" class="smoothScroll">CONTACT</a></li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<section id="team">
+	<div class="col-md-12" style="margin-top: 90px;">
+            <div class="input-group" id="adv-search">
+                <input type="text" class="form-control" placeholder="Search for Projects" />
+                <div class="input-group-btn">
+                    <div class="btn-group" role="group">
+                        <div class="dropdown dropdown-lg">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+                            <div class="dropdown-menu dropdown-menu-right" role="menu">
+                                <form class="form-horizontal" role="form">
+                                  <div class="form-group">
+                                    <label for="filter">Filter by category</label>
+                                    <select class="form-control">
+                                        <option value="0" selected>All</option>
+                                        <option value="html">Html</option>
+                                        <option value="css">Css</option>
+                                        <option value="js">Javascript</option>
+                                        <option value="java">Java</option>
+                                        <option value="Csharp">C#</option>
+                                    </select>
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="filter">Filter by Skills</label>
+                                    <select class="form-control">
+                                        <option value="0" selected>All</option>
+                                        <option value="html">Html</option>
+                                        <option value="css">Css</option>
+                                        <option value="js">Javascript</option>
+                                        <option value="java">Java</option>
+                                        <option value="Csharp">C#</option>
+                                    </select>
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="filter">Filter by Level</label>
+                                    <select class="form-control">
+                                        <option value="0" selected>All</option>
+                                        <option value="one">1</option>
+                                        <option value="two">2</option>
+                                        <option value="three">3</option>
+                                        <option value="four">4</option>
+                                        <option value="five">5</option>
+                                        <option value="six">6</option>
+                                        <option value="seven">7</option>
+                                        <option value="eight">8</option>
+                                        <option value="nine">9</option>
+                                        <option value="ten">10</option>
+                                    </select>
+                                  </div>
+                                  <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                                </form>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary"><img src="images/account-search.png"></button>
+</section>
+<!-- pricing section -->
+<section id="pricing">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12 text-center">
+				<div class="section-title">
+					<strong>Projects</strong>
+					<hr style="margin-bottom: 30px;">
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6">
+				<div class="plan plan-one wow bounceIn" data-wow-delay="0.3s">
+					<div class="plan_title">
+						<i class="icon-mobile medium-icon"></i>
+						<h1 style="color: #00c6d7; margin-top: -15px;">Project Name</h1>
+						<span>Coordinator name</span>
+						<hr>
+						<span style="margin-bottom: 12px;"><i>Short Description</i></span>
+						<p style="font-size: 12px; font-weight: bolder; letter-spacing:1px; line-height:15px; padding-top:5px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+					</div>
+					<div class="all_project">
+						<div class="project_task">
+							<ul class="a">
+								<h3>List of tasks</h3>
+								<li>Task</li>
+								<li>Task</li>
+								<li>Task</li>
+								<li>Task</li>
+							</ul>
+						</div>
+						<div class="project_skills">
+							<ul class="a">
+								<h3>Set of skills</h3>
+								<li>Php</li>
+								<li>Html</li>
+								<li>Css</li>
+								<li>Java</li>
+							</ul>
+						</div>
+					</div>
+					<button class="btn btn-warning">Get it now</button>
+					<div class="project_last_line">
+						<div class="project_comments"><p>Comments: 20</p></div>
+						<div class="project_stage"><p class="process">Process <img src="images/loop.png"></p></div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6">
+				<div class="plan plan-one wow bounceIn" data-wow-delay="0.3s">
+					<div class="plan_title">
+						<i class="icon-mobile medium-icon"></i>
+						<h1 style="color: #00c6d7; margin-top: -15px;">Project Name</h1>
+						<span>Coordinator name</span>
+						<hr>
+						<span style="margin-bottom: 12px;"><i>Short Description</i></span>
+						<p style="font-size: 12px; font-weight: bolder; letter-spacing:1px; line-height:15px; padding-top:5px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+					</div>
+					<div class="all_project">
+						<div class="project_task">
+							<ul class="a">
+								<h3>List of tasks</h3>
+								<li>Task</li>
+								<li>Task</li>
+								<li>Task</li>
+								<li>Task</li>
+							</ul>
+						</div>
+						<div class="project_skills">
+							<ul class="a">
+								<h3>Set of skills</h3>
+								<li>Php</li>
+								<li>Html</li>
+								<li>Css</li>
+								<li>Java</li>
+							</ul>
+						</div>
+					</div>
+					<button class="btn btn-warning">Get it now</button>
+					<div class="project_last_line">
+						<div class="project_comments"><p>Comments: 20</p></div>
+						<div class="project_stage"><p class="done">Done <img src="images/done.png"></p></div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6">
+				<div class="plan plan-one wow bounceIn" data-wow-delay="0.3s">
+					<div class="plan_title">
+						<i class="icon-mobile medium-icon"></i>
+						<h1 style="color: #00c6d7; margin-top: -15px;">Project Name</h1>
+						<span>Coordinator name</span>
+						<hr>
+						<span style="margin-bottom: 12px;"><i>Short Description</i></span>
+						<p style="font-size: 12px; font-weight: bolder; letter-spacing:1px; line-height:15px; padding-top:5px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+					</div>
+					<div class="all_project">
+						<div class="project_task">
+							<ul class="a">
+								<h3>List of tasks</h3>
+								<li>Task</li>
+								<li>Task</li>
+								<li>Task</li>
+								<li>Task</li>
+							</ul>
+						</div>
+						<div class="project_skills">
+							<ul class="a">
+								<h3>Set of skills</h3>
+								<li>Php</li>
+								<li>Html</li>
+								<li>Css</li>
+								<li>Java</li>
+							</ul>
+						</div>
+					</div>
+					<button class="btn btn-warning">Get it now</button>
+					<div class="project_last_line">
+						<div class="project_comments"><p>Comments: 20</p></div>
+						<div class="project_stage"><p class="open">Open <img src="images/open.png"></p></div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6">
+				<div class="plan plan-one wow bounceIn" data-wow-delay="0.3s">
+					<div class="plan_title">
+						<i class="icon-mobile medium-icon"></i>
+						<h1 style="color: #00c6d7; margin-top: -15px;">Project Name</h1>
+						<span>Coordinator name</span>
+						<hr>
+						<span style="margin-bottom: 12px;"><i>Short Description</i></span>
+						<p style="font-size: 12px; font-weight: bolder; letter-spacing:1px; line-height:15px; padding-top:5px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+					</div>
+					<div class="all_project">
+						<div class="project_task">
+							<ul class="a">
+								<h3>List of tasks</h3>
+								<li>Task</li>
+								<li>Task</li>
+								<li>Task</li>
+								<li>Task</li>
+							</ul>
+						</div>
+						<div class="project_skills">
+							<ul class="a">
+								<h3>Set of skills</h3>
+								<li>Php</li>
+								<li>Html</li>
+								<li>Css</li>
+								<li>Java</li>
+							</ul>
+						</div>
+					</div>
+					<button class="btn btn-warning">Get it now</button>
+					<div class="project_last_line">
+						<div class="project_comments"><p>Comments: 20</p></div>
+						<div class="project_stage"><p class="process">Process <img src="images/loop.png"></p></div>
+					</div>
+				</div>
+			</div>
+			<!-- Project Description Start -->
+			<div class="col-md-4 col-sm-6">
+				<div class="plan plan-one wow bounceIn" data-wow-delay="0.3s">
+					<div class="plan_title">
+						<i class="icon-mobile medium-icon"></i>
+						<h1 style="color: #00c6d7; margin-top: -15px;">Project Name</h1>
+						<span>Coordinator name</span>
+						<hr>
+						<span style="margin-bottom: 12px;"><i>Short Description</i></span>
+						<p style="font-size: 12px; font-weight: bolder; letter-spacing:1px; line-height:15px; padding-top:5px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+					</div>
+					<div class="all_project">
+						<div class="project_task">
+							<ul class="a">
+								<h3>List of tasks</h3>
+								<li>Task</li>
+								<li>Task</li>
+								<li>Task</li>
+								<li>Task</li>
+							</ul>
+						</div>
+						<div class="project_skills">
+							<ul class="a">
+								<h3>Set of skills</h3>
+								<li>Php</li>
+								<li>Html</li>
+								<li>Css</li>
+								<li>Java</li>
+							</ul>
+						</div>
+					</div>
+					<button class="btn btn-warning">Get it now</button>
+					<div class="project_last_line">
+						<div class="project_comments"><p>Comments: 20</p></div>
+						<div class="project_stage"><p class="open">Open <img src="images/open.png"></p></div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6">
+				<div class="plan plan-one wow bounceIn" data-wow-delay="0.3s">
+					<div class="plan_title">
+						<i class="icon-mobile medium-icon"></i>
+						<h1 style="color: #00c6d7; margin-top: -15px;">Project Name</h1>
+						<span>Coordinator name</span>
+						<hr>
+						<span style="margin-bottom: 12px;"><i>Short Description</i></span>
+						<p style="font-size: 12px; font-weight: bolder; letter-spacing:1px; line-height:15px; padding-top:5px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+					</div>
+					<div class="all_project">
+						<div class="project_task">
+							<ul class="a">
+								<h3>List of tasks</h3>
+								<li>Task</li>
+								<li>Task</li>
+								<li>Task</li>
+								<li>Task</li>
+							</ul>
+						</div>
+						<div class="project_skills">
+							<ul class="a">
+								<h3>Set of skills</h3>
+								<li>Php</li>
+								<li>Html</li>
+								<li>Css</li>
+								<li>Java</li>
+							</ul>
+						</div>
+					</div>
+					<button class="btn btn-warning">Get it now</button>
+					<div class="project_last_line">
+						<div class="project_comments"><p>Comments: 20</p></div>
+						<div class="project_stage"><p class="done">Done <img src="images/done.png"></p></div>
+					</div>
+				</div>
+			</div>
+			<!-- Project Description End -->
+			<!-- If you want to add another projects add right here !!!! -->
+			<div class="col-md-4 col-sm-6">
+				<div class="plan plan-one wow bounceIn" data-wow-delay="0.3s">
+					<div class="plan_title">
+						<i class="icon-mobile medium-icon"></i>
+						<h1 style="color: #00c6d7; margin-top: -15px;">Project Name</h1>
+						<span>Coordinator name</span>
+						<hr>
+						<span style="margin-bottom: 12px;"><i>Short Description</i></span>
+						<p style="font-size: 12px; font-weight: bolder; letter-spacing:1px; line-height:15px; padding-top:5px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+					</div>
+					<div class="all_project">
+						<div class="project_task">
+							<ul class="a">
+								<h3>List of tasks</h3>
+								<li>Task</li>
+								<li>Task</li>
+								<li>Task</li>
+								<li>Task</li>
+							</ul>
+						</div>
+						<div class="project_skills">
+							<ul class="a">
+								<h3>Set of skills</h3>
+								<li>Php</li>
+								<li>Html</li>
+								<li>Css</li>
+								<li>Java</li>
+							</ul>
+						</div>
+					</div>
+					<button class="btn btn-warning">Get it now</button>
+					<div class="project_last_line">
+						<div class="project_comments"><p>Comments: 20</p></div>
+						<div class="project_stage"><p class="process">Process <img src="images/loop.png"></p></div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6">
+				<div class="plan plan-one wow bounceIn" data-wow-delay="0.3s">
+					<div class="plan_title">
+						<i class="icon-mobile medium-icon"></i>
+						<h1 style="color: #00c6d7; margin-top: -15px;">Project Name</h1>
+						<span>Coordinator name</span>
+						<hr>
+						<span style="margin-bottom: 12px;"><i>Short Description</i></span>
+						<p style="font-size: 12px; font-weight: bolder; letter-spacing:1px; line-height:15px; padding-top:5px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+					</div>
+					<div class="all_project">
+						<div class="project_task">
+							<ul class="a">
+								<h3>List of tasks</h3>
+								<li>Task</li>
+								<li>Task</li>
+								<li>Task</li>
+								<li>Task</li>
+							</ul>
+						</div>
+						<div class="project_skills">
+							<ul class="a">
+								<h3>Set of skills</h3>
+								<li>Php</li>
+								<li>Html</li>
+								<li>Css</li>
+								<li>Java</li>
+							</ul>
+						</div>
+					</div>
+					<button class="btn btn-warning">Get it now</button>
+					<div class="project_last_line">
+						<div class="project_comments"><p>Comments: 20</p></div>
+						<div class="project_stage"><p class="done">Done<img src="images/done.png"></p></div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6">
+				<div class="plan plan-one wow bounceIn" data-wow-delay="0.3s">
+					<div class="plan_title">
+						<i class="icon-mobile medium-icon"></i>
+						<h1 style="color: #00c6d7; margin-top: -15px;">Project Name</h1>
+						<span>Coordinator name</span>
+						<hr>
+						<span style="margin-bottom: 12px;"><i>Short Description</i></span>
+						<p style="font-size: 12px; font-weight: bolder; letter-spacing:1px; line-height:15px; padding-top:5px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+					</div>
+					<div class="all_project">
+						<div class="project_task">
+							<ul class="a">
+								<h3>List of tasks</h3>
+								<li>Task</li>
+								<li>Task</li>
+								<li>Task</li>
+								<li>Task</li>
+							</ul>
+						</div>
+						<div class="project_skills">
+							<ul class="a">
+								<h3>Set of skills</h3>
+								<li>Php</li>
+								<li>Html</li>
+								<li>Css</li>
+								<li>Java</li>
+							</ul>
+						</div>
+					</div>
+					<button class="btn btn-warning">Get it now</button>
+					<div class="project_last_line">
+						<div class="project_comments"><p>Comments: 20</p></div>
+						<div class="project_stage"><p class="open">Open <img src="images/open.png"></p></div>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="col-md-4 col-sm-6">
+				<div class="plan plan-one wow bounceIn" data-wow-delay="0.3s">
+					<div class="plan_title">
+						<i class="icon-mobile medium-icon"></i>
+						<h1 style="color: #00c6d7; margin-top: -15px;">Project Name</h1>
+						<span>Coordinator name</span>
+						<hr>
+						<span style="margin-bottom: 12px;"><i>Short Description</i></span>
+						<p style="font-size: 12px; font-weight: bolder; letter-spacing:1px; line-height:15px; padding-top:5px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+					</div>
+					<div class="all_project">
+						<div class="project_task">
+							<ul class="a">
+								<h3>List of tasks</h3>
+								<li>Task</li>
+								<li>Task</li>
+								<li>Task</li>
+								<li>Task</li>
+							</ul>
+						</div>
+						<div class="project_skills">
+							<ul class="a">
+								<h3>Set of skills</h3>
+								<li>Php</li>
+								<li>Html</li>
+								<li>Css</li>
+								<li>Java</li>
+							</ul>
+						</div>
+					</div>
+					<button class="btn btn-warning">Get it now</button>
+					<div class="project_last_line">
+						<div class="project_comments"><p>Comments: 20</p></div>
+						<div class="project_stage"><p class="process">Process <img src="images/loop.png"></p></div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6">
+				<div class="plan plan-one wow bounceIn" data-wow-delay="0.3s">
+					<div class="plan_title">
+						<i class="icon-mobile medium-icon"></i>
+						<h1 style="color: #00c6d7; margin-top: -15px;">Project Name</h1>
+						<span>Coordinator name</span>
+						<hr>
+						<span style="margin-bottom: 12px;"><i>Short Description</i></span>
+						<p style="font-size: 12px; font-weight: bolder; letter-spacing:1px; line-height:15px; padding-top:5px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+					</div>
+					<div class="all_project">
+						<div class="project_task">
+							<ul class="a">
+								<h3>List of tasks</h3>
+								<li>Task</li>
+								<li>Task</li>
+								<li>Task</li>
+								<li>Task</li>
+							</ul>
+						</div>
+						<div class="project_skills">
+							<ul class="a">
+								<h3>Set of skills</h3>
+								<li>Php</li>
+								<li>Html</li>
+								<li>Css</li>
+								<li>Java</li>
+							</ul>
+						</div>
+					</div>
+					<button class="btn btn-warning">Get it now</button>
+					<div class="project_last_line">
+						<div class="project_comments"><p>Comments: 20</p></div>
+						<div class="project_stage"><p class="open">Open <img src="images/open.png"></p></div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6">
+				<div class="plan plan-one wow bounceIn" data-wow-delay="0.3s">
+					<div class="plan_title">
+						<i class="icon-mobile medium-icon"></i>
+						<h1 style="color: #00c6d7; margin-top: -15px;">Project Name</h1>
+						<span>Coordinator name</span>
+						<hr>
+						<span style="margin-bottom: 12px;"><i>Short Description</i></span>
+						<p style="font-size: 12px; font-weight: bolder; letter-spacing:1px; line-height:15px; padding-top:5px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+					</div>
+					<div class="all_project">
+						<div class="project_task">
+							<ul class="a">
+								<h3>List of tasks</h3>
+								<li>Task</li>
+								<li>Task</li>
+								<li>Task</li>
+								<li>Task</li>
+							</ul>
+						</div>
+						<div class="project_skills">
+							<ul class="a">
+								<h3>Set of skills</h3>
+								<li>Php</li>
+								<li>Html</li>
+								<li>Css</li>
+								<li>Java</li>
+							</ul>
+						</div>
+					</div>
+					<button class="btn btn-warning">Get it now</button>
+					<div class="project_last_line">
+						<div class="project_comments"><p>Comments: 20</p></div>
+						<div class="project_stage"><p class="done">Done <img src="images/done.png"></p></div>
+					</div>
+				</div>
+			</div>
+			<!-- Page Counter -->
+				<div class="pagination">
+				    <a href="#">&laquo;</a>
+				    <a href="#"  class="active">1</a>
+				    <a href="#">2</a>
+				    <a href="#">3</a>
+				    <a href="#">4</a>
+				    <a href="#">5</a>
+				    <a href="#">6</a>
+				    <a href="#">&raquo;</a>
+  				</div>
+		</div>
+	</div>		
+</section>
+
+<!-- footer section -->
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12">
+				<p>Project for Web Engineering</p>
+				<hr>
+				<ul class="social-icon">
+					<li><a href="#" class="fa fa-facebook wow fadeIn" data-wow-delay="0.3s"></a></li>
+					<li><a href="#" class="fa fa-twitter wow fadeIn" data-wow-delay="0.6s"></a></li>
+					<li><a href="#" class="fa fa-dribbble wow fadeIn" data-wow-delay="0.9s"></a></li>
+					<li><a href="#" class="fa fa-behance wow fadeIn" data-wow-delay="0.9s"></a></li>
+					<li><a href="#" class="fa fa-tumblr wow fadeIn" data-wow-delay="0.9s"></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/smoothscroll.js"></script>
+<script src="js/isotope.js"></script>
+<script src="js/imagesloaded.min.js"></script>
+<script src="js/nivo-lightbox.min.js"></script>
+<script src="js/jquery.backstretch.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/custom.js"></script>
+
+</body>
+</html>
