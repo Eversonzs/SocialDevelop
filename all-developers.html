@@ -80,9 +80,10 @@
                                    
                                   </div>
                                   <div class="form-group">
-                                    <label for="filter">Filter by Skills</label>
+                                  	<div id="visibleskills">
+                                    <label for="filter">Filter by skills</label>
                                     <select class="form-control">
-                                        <option value="0" selected>All</option>
+                                        <option value="all" selected>All</option>
                                         <option value="html">Html</option>
                                         <option value="css">Css</option>
                                         <option value="js">Javascript</option>
@@ -90,22 +91,28 @@
                                         <option value="Csharp">C#</option>
                                     </select>
                                   </div>
-                                  <div class="form-group">
-                                    <label for="filter">Filter by Level</label>
-                                    <select class="form-control">
-                                        <option value="0" selected>All</option>
-                                        <option value="one">1</option>
-                                        <option value="two">2</option>
-                                        <option value="three">3</option>
-                                        <option value="four">4</option>
-                                        <option value="five">5</option>
-                                        <option value="six">6</option>
-                                        <option value="seven">7</option>
-                                        <option value="eight">8</option>
-                                        <option value="nine">9</option>
-                                        <option value="ten">10</option>
-                                    </select>
                                   </div>
+                                  <input id="btnvisible" class="btn btn-default" type="button" value="Add Level" />
+                                  <div id="hidedskills">
+	                                  <div class="form-group">
+	                                    <label for="filter">Filter by level</label>
+	                                    <select class="form-control">
+	                                        <option value="all" selected>All</option>
+	                                        <option value="one">1</option>
+	                                        <option value="two">2</option>
+	                                        <option value="three">3</option>
+	                                        <option value="four">4</option>
+	                                        <option value="five">5</option>
+	                                        <option value="six">6</option>
+	                                        <option value="seven">7</option>
+	                                        <option value="eight">8</option>
+	                                        <option value="nine">9</option>
+	                                        <option value="ten">10</option>
+	                                    </select>
+	                                  </div>
+                                  </div>
+                                  <input id="btnhide" class="btn btn-default" type="button" value="Delete Level" />
+
                                   <div class="form-group">
                                     
                                   </div>
@@ -449,6 +456,8 @@
 <script src="js/jquery.backstretch.min.js"></script>
 <script src="js/wow.min.js"></script>
 <script src="js/custom.js"></script>
+<script src="js/skillsvisibility.js"></script>
+
 
 </body>
 </html>
