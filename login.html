@@ -84,27 +84,42 @@
       <input type="password" placeholder="Password" required/>
       <input type="email" placeholder="Email Address" required/>
       <input type="tel" placeholder="Phone Number" required/>
+      <textarea placeholder="Cirriculum" name="Cirriculum" rows="5" maxlength="250" style="width: 100%; border: 1px solid #d9d9d9;"></textarea>
+      <input type="file" accept=".xlsx,.xls,image/*,.doc, .docx,.ppt, .pptx,.txt,.pdf" />
       <select required>
-      	  <option>Skills</option>
-		  <option value="php">Php</option>
-		  <option value="html">Html</option>
-		  <option value="css">Css</option>
-		  <option value="java">Java</option>
+      	  <option>Sex</option>
+		  <option value="male">Male</option>
+		  <option value="female">Female</option>
 	  </select>
-	  <select required>
-      	  <option>Level</option>
-		  <option value="one">1</option>
-		  <option value="two">2</option>
-		  <option value="three">3</option>
-		  <option value="four">4</option>
-		  <option value="five">5</option>
-		  <option value="six">6</option>
-		  <option value="seven">7</option>
-		  <option value="eight">8</option>
-		  <option value="nine">9</option>
-		  <option value="ten">10</option>
-	  </select>
-	  <button class="add_skill">Add skill</button>
+      
+	  <div id="selections">
+		  <div class="input-group" id="selection">
+		    <span class="input-group-addon" style="display: none;">
+		    <i class="icon wb-menu" aria-hidden="true"></i>
+		     </span>
+		    <select class="show-tick" data-plugin="select2" id="select">
+		       <option>Skills</option>
+			  <option value="php">Php</option>
+			  <option value="html">Html</option>
+			  <option value="css">Css</option>
+			  <option value="java">Java</option>
+		    </select>
+		     <select class="show-tick" data-plugin="select2" id="select">
+		      <option>Level</option>
+			  <option value="one">1</option>
+			  <option value="two">2</option>
+			  <option value="three">3</option>
+			  <option value="four">4</option>
+			  <option value="five">5</option>
+			  <option value="six">6</option>
+			  <option value="seven">7</option>
+			  <option value="eight">8</option>
+			  <option value="nine">9</option>
+			  <option value="ten">10</option>
+		    </select>
+		  </div>
+	</div>
+		<button class="btn btn-primary" id="add_skill" type="button" style="border-radius: 0px;"> Add more skills</button>
       <button>Register</button>
     </form>
   </div>
@@ -147,5 +162,8 @@
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src="js/login.js"></script>
+<script src="js/clonedivs.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
 </body>
 </html>
