@@ -70,7 +70,7 @@
 		<div class="col-md-4">
 			<div class="flex" style="margin-bottom: 11px;">
 				<p>Project Name:</p>
-				<input type="text" placeholder="Project Name" required/>
+				<input type="text" placeholder="Project Name" style="width: 310px;" required/>
 			</div>
 			<div class="flex">
 				<p>Description:&nbsp;&nbsp;&nbsp;</p>
@@ -78,14 +78,16 @@
 			</div>
 			<div class="flex">
 				<p>Task:</p>
-				<input type="text" name="tasks" style="margin-left: 55px;">
+				<input type="text" name="tasks" style="margin-left: 55px; width: 320px;">
 			</div>
-			<div id="selections">
+			<p>Upload Photo</p>
+			<input type="file" accept="image/*" style="margin-bottom: 15px; border:1px solid grey;" required />
+			<div id="selections" style="">
 		  <div class="input-group" id="selection">
 		    <span class="input-group-addon" style="display: none;">
 		    <i class="icon wb-menu" aria-hidden="true"></i>
 		     </span>
-		    <select class="show-tick" data-plugin="select2" id="select">
+		    <select class="show-tick" data-plugin="select2" id="select" style="margin-bottom: 15px;">
 		       <option>Skills</option>
 			  <option value="php">Php</option>
 			  <option value="html">Html</option>
@@ -110,7 +112,7 @@
 		<button class="btn btn-primary" id="add_skill" type="button" style="border-radius: 0px;"> Add more skills</button>
 		</div>
 	</div>
-	<button>Add Project</button>
+	<button type="button" class="btn btn-default" style="margin-left: 25px;">Add project</button>
 </form>
 
 
