@@ -1,7 +1,8 @@
 
+@import url('https://fonts.googleapis.com/css?family=Abel');
 body {
     background: #ffffff;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Abel', sans-serif;
     font-weight: 400;
     position: relative;
   }
@@ -866,7 +867,7 @@ media quires for mobile
 body {
   background: #e9e9e9;
   color: #666666;
-  font-family: 'RobotoDraft', 'Roboto', sans-serif;
+  font-family: 'Abel', sans-serif;
   font-size: 14px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -1160,4 +1161,33 @@ body {
 #btnhide2
 {
   display:none;
+}
+.profile-image
+{
+  width: 100px;
+  height: 100px;
+}
+.profile-header
+{
+  display: flex;
+  justify-content: center;
+}
+.profile-header h1
+{
+  color: #00c6d7;
+}
+.column
+{
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+}
+.smallwrap
+{
+  width: 100%;
+  height: 150px;
+}
+.flex
+{
+  display: flex;
 }
