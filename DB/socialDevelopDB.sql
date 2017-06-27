@@ -102,7 +102,7 @@ CREATE TABLE IF NOT EXISTS `socialDevelop`.`tblTasks` (
   `collaboratorsNum` INT NOT NULL,
   `idType` INT NOT NULL,
   `idProject` INT NOT NULL,
-  PRIMARY KEY (`idTask`),
+  PRIMARY KEY (`idTask`, `idProject`),
   INDEX `fk_tblTasks_tblType1_idx` (`idType` ASC),
   INDEX `fk_tblTasks_tblProjects1_idx` (`idProject` ASC),
   CONSTRAINT `fk_tblTasks_tblType1`
@@ -129,6 +129,7 @@ CREATE TABLE IF NOT EXISTS `socialDevelop`.`tblMessages` (
   `dateMessage` DATE NULL,
   `idProject` INT NULL,
   `idTask` INT NULL,
+  `privacity` VARCHAR(15) NULL,
   PRIMARY KEY (`idMessage`),
   INDEX `fk_tblMessages_tblProjects1_idx` (`idProject` ASC),
   INDEX `fk_tblMessages_tblTasks1_idx` (`idTask` ASC),
@@ -244,6 +245,40 @@ CREATE TABLE IF NOT EXISTS `socialDevelop`.`tblTasksDevelopers` (
   CONSTRAINT `fk_tblDeveloper_tblTasks1`
     FOREIGN KEY (`idTask`)
     REFERENCES `socialDevelop`.`tblTasks` (`idTask`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `socialDevelop`.`tblCollaborationsDocs`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `socialDevelop`.`tblCollaborationsDocs` ;
+
+CREATE TABLE IF NOT EXISTS `socialDevelop`.`tblCollaborationsDocs` (
+  `idTask` INT NOT NULL,
+  `idProject` INT NOT NULL,
+  `idUserReciver` INT NOT NULL,
+  `tblUserSender` INT NOT NULL,
+  `status` VARCHAR(10) NOT NULL,
+  `deadLine` DATE NOT NULL,
+  `submissionDate` DATE NOT NULL,
+  INDEX `fk_tblCollaborationsDocs_tblTasks1_idx` (`idTask` ASC, `idProject` ASC),
+  INDEX `fk_tblCollaborationsDocs_tblUsers1_idx` (`idUserReciver` ASC),
+  INDEX `fk_tblCollaborationsDocs_tblUsers2_idx` (`tblUserSender` ASC),
+  CONSTRAINT `fk_tblCollaborationsDocs_tblTasks1`
+    FOREIGN KEY (`idTask` , `idProject`)
+    REFERENCES `socialDevelop`.`tblTasks` (`idTask` , `idProject`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_tblCollaborationsDocs_tblUsers1`
+    FOREIGN KEY (`idUserReciver`)
+    REFERENCES `socialDevelop`.`tblUsers` (`idUser`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_tblCollaborationsDocs_tblUsers2`
+    FOREIGN KEY (`tblUserSender`)
+    REFERENCES `socialDevelop`.`tblUsers` (`idUser`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
