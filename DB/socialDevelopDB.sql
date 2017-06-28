@@ -98,10 +98,12 @@ CREATE TABLE IF NOT EXISTS `socialDevelop`.`tblTasks` (
   `idTask` INT NOT NULL AUTO_INCREMENT,
   `taskName` VARCHAR(45) NOT NULL,
   `description` VARCHAR(500) NULL,
-  `status` VARCHAR(10) NOT NULL,
+  `status` VARCHAR(15) NOT NULL,
   `collaboratorsNum` INT NOT NULL,
   `idType` INT NOT NULL,
   `idProject` INT NOT NULL,
+  `startDate` DATE NOT NULL,
+  `dueDate` DATE NOT NULL,
   PRIMARY KEY (`idTask`, `idProject`),
   INDEX `fk_tblTasks_tblType1_idx` (`idType` ASC),
   INDEX `fk_tblTasks_tblProjects1_idx` (`idProject` ASC),
@@ -189,6 +191,7 @@ DROP TABLE IF EXISTS `socialDevelop`.`tblTasksSkillsLevel` ;
 CREATE TABLE IF NOT EXISTS `socialDevelop`.`tblTasksSkillsLevel` (
   `idSkill` INT NOT NULL,
   `idTask` INT NOT NULL,
+  `level` INT NULL,
   INDEX `fk_tblTasksSkillsLevel_tblSkills1_idx` (`idSkill` ASC),
   INDEX `fk_tblTasksSkillsLevel_tblTasks1_idx` (`idTask` ASC),
   CONSTRAINT `fk_tblTasksSkillsLevel_tblSkills1`
@@ -235,6 +238,8 @@ DROP TABLE IF EXISTS `socialDevelop`.`tblTasksDevelopers` ;
 CREATE TABLE IF NOT EXISTS `socialDevelop`.`tblTasksDevelopers` (
   `idUser` INT NOT NULL,
   `idTask` INT NOT NULL,
+  `reference` VARCHAR(25) NULL,
+  `rating` INT NULL,
   INDEX `fk_tblDeveloper_tblUsers1_idx` (`idUser` ASC),
   INDEX `fk_tblDeveloper_tblTasks1_idx` (`idTask` ASC),
   CONSTRAINT `fk_tblDeveloper_tblUsers1`
@@ -290,9 +295,9 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `socialDevelop`.`tblRoles` ;
 
 CREATE TABLE IF NOT EXISTS `socialDevelop`.`tblRoles` (
-  `idRol` INT NOT NULL AUTO_INCREMENT,
-  `rolName` VARCHAR(45) NULL,
-  PRIMARY KEY (`idRol`))
+  `idRole` INT NOT NULL AUTO_INCREMENT,
+  `roleName` VARCHAR(45) NULL,
+  PRIMARY KEY (`idRole`))
 ENGINE = InnoDB;
 
 
@@ -304,10 +309,10 @@ DROP TABLE IF EXISTS `socialDevelop`.`tblUsersProjects` ;
 CREATE TABLE IF NOT EXISTS `socialDevelop`.`tblUsersProjects` (
   `idUser` INT NOT NULL,
   `idProject` INT NOT NULL,
-  `idRol` INT NOT NULL,
+  `idRole` INT NOT NULL,
   INDEX `fk_tblUsersProjects_tblUsers1_idx` (`idUser` ASC),
   INDEX `fk_tblUsersProjects_tblProjects1_idx` (`idProject` ASC),
-  INDEX `fk_tblUsersProjects_tblRoles1_idx` (`idRol` ASC),
+  INDEX `fk_tblUsersProjects_tblRoles1_idx` (`idRole` ASC),
   CONSTRAINT `fk_tblUsersProjects_tblUsers1`
     FOREIGN KEY (`idUser`)
     REFERENCES `socialDevelop`.`tblUsers` (`idUser`)
@@ -319,8 +324,8 @@ CREATE TABLE IF NOT EXISTS `socialDevelop`.`tblUsersProjects` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_tblUsersProjects_tblRoles1`
-    FOREIGN KEY (`idRol`)
-    REFERENCES `socialDevelop`.`tblRoles` (`idRol`)
+    FOREIGN KEY (`idRole`)
+    REFERENCES `socialDevelop`.`tblRoles` (`idRole`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
