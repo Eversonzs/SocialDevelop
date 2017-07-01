@@ -5,8 +5,12 @@
  */
 package com.socialdevelop.controllers;
 
+import com.socialdevelop.entities.Project;
 import com.socialdevelop.entities.Users;
+import com.socialdevelop.services.ProjectService;
 import com.socialdevelop.services.UserService;
+import java.util.List;
+import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -21,12 +25,46 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 @RequestMapping("/app")
 public class AppController{
-    
+    List<Project> projectList=null;
     @Autowired UserService service_user;
-    
+    @Autowired ProjectService service_project;
+
     @RequestMapping("/main")
-    public String main(){
-        return "login-page";
+    public String main(ModelMap model){
+        projectList=service_project.browseProjects();
+        model.put("projectlist", projectList);
+        return "home-page";
+    }
+    
+    
+    @RequestMapping("/allprojects")
+    public String showAllProjects(ModelMap model)
+    {
+        model.put("projectlist", projectList);
+        return "all-projects";
+    }
+    
+    @RequestMapping(value="/projectpage", method = RequestMethod.GET)
+    public String viewProjectInfo(@RequestParam("name") String name,ModelMap model)
+    {
+        int id=1;
+        Project project=new Project();
+        project.setName(name);
+        //Project project=service_project.viewProjectInfo(id);
+        model.put("project", project);
+        return "project-page";
+    }
+    @RequestMapping(value="/gotoaddproject")
+    public String goToAddProjectPage(){
+        return "add-project";
+    }
+    
+    @RequestMapping(value="/addproject", method=RequestMethod.POST)
+    public String addProject(@RequestParam("name") String name){
+        Project project=new Project();
+        project.setName(name);
+        service_project.addProject(project);
+        return "add-project";
     }
     
     @RequestMapping(value = "/login", method = RequestMethod.POST)
